@@ -84,8 +84,8 @@ function Square(props) {
 
       const moves = history.map((step, move) => {
           const desc = move ?
-          'Go to move #' + move :
-          'Go to game start';
+          'Şu Adıma Git #' + move :
+          'Başlangıç Adımına Git';
           return (
               <li key={move}>
                   <button onClick={() => this.jumpTo(move)}>{desc}</button>
@@ -95,9 +95,9 @@ function Square(props) {
   
       let status;
       if (winner) {
-        status = 'Winner: ' + winner;
+        status = 'Kazanan: ' + winner;
       } else {
-        status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        status = 'Sıradaki Oyuncu: ' + (this.state.xIsNext ? 'X' : 'O');
       }
   
       return (
